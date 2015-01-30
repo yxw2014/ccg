@@ -1,5 +1,0 @@
-from mongo import Mongo
-m= Mongo.getInstance('50.23.111.162', 27017, None, None)
-db= m.myninja
-print db
-print m.server_info()
