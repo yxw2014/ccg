@@ -1,0 +1,255 @@
+# -*- coding: utf-8 -*-
+import sys
+import os
+import random
+import time
+import json
+from pprint import pprint
+from errors import err
+#<class 'model.BaseModel.BaseModel'>
+from model.BaseModel import BaseModel
+from model.RoomModel import RoomModel
+from model.CardModel import CardModel
+from model.FightModel import FightModel
+from pymongo.errors import AutoReconnect
+						
+class EffectModel(BaseModel): 
+	def __init__(self): 
+		super(EffectModel, self).__init__()
+			
+	'''
+	#冲锋
+	@classmethod		
+	def doEffectDash(self, room, pos, uniqid, effect):
+		if isinstance(room, dict)== False or uniqid== None or isinstance(effect, dict)== False or uniqid== None or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['cardPlay1'][-1]['status']= FightModel.STATUS_DASH 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['cardPlay2'][-1]['status']= FightModel.STATUS_DASH 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+	'''
+		
+	#冲锋
+	@classmethod		
+	def doEffectDash(self, room, pos, effect):
+		'''
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['cardPlay1'][-1]['currentAtkTime']= 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['cardPlay2'][-1]['currentAtkTime']= 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+		'''
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		
+		range= effect['targetA']['range']		
+		ids= str(range.get('cardID'))
+		
+		thisCard= range.get('thisCard')
+		uniqid= effect['object']
+		
+		if thisCard== 1:
+			ids= [uniqid]
+
+		if pos== 1:
+			for index, val in enumerate(ids):
+				p= RoomModel.getRoomCardPosById(room['cardPlay1'], val)
+				if p>0:
+					room['cardPlay1'][p]['currentAtkTime']= 1
+					room['cardPlay1'][p]['skill'].append(effect['skill_id'])
+		else:
+			for index, val in enumerate(ids):
+				p= RoomModel.getRoomCardPosById(room['cardPlay2'], val)
+				if p>0:
+					room['cardPlay2'][p]['currentAtkTime']= 1
+					room['cardPlay2'][p]['skill'].append(effect['skill_id'])		
+		return True
+	
+	#嘲讽
+	@classmethod		
+	def doEffectTaunt(self, room, pos, effect):
+		'''
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['cardPlay1'][-1]['status']= FightModel.STATUS_TAUNT 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['cardPlay2'][-1]['status']= FightModel.STATUS_TAUNT 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+		'''
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		
+		range= effect['targetA']['range']		
+		ids= str(range.get('cardID'))
+		
+		thisCard= range.get('thisCard')
+		uniqid= effect['object']
+		
+		if thisCard== 1:
+			ids= [uniqid]
+
+		if pos== 1:
+			for index, val in enumerate(ids):
+				p= RoomModel.getRoomCardPosById(room['cardPlay1'], val)
+				if p>0:
+					room['cardPlay1'][p]['status']= FightModel.STATUS_TAUNT
+					room['cardPlay1'][p]['skill'].append(effect['skill_id'])
+		else:
+			for index, val in enumerate(ids):
+				p= RoomModel.getRoomCardPosById(room['cardPlay2'], val)
+				if p>0:
+					room['cardPlay2'][p]['status']= FightModel.STATUS_TAUNT
+					room['cardPlay2'][p]['skill'].append(effect['skill_id'])		
+		return True
+
+	'''
+	@classmethod		
+	def doEffectAddHp(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['crystal1'][-1]['hp']= room['hp']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['crystal2'][-1]['status']= room['crystal2']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True	
+	
+	@classmethod		
+	def doEffectAddHpAndAtk(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['crystal1']= room['crystal1']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['crystal2'][-1]['status']= room['crystal2']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+	'''
+
+	#法力水晶
+	@classmethod		
+	def doEffectAddCrystal(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		
+		range= effect['targetA']['range']		
+		ids= str(range.get('cardID'))
+		
+		value= effect['value']
+		if value== None or value< 1:
+			value= 1
+
+		if pos== 1:
+			room['crystal1']= room['crystal1']+ value
+		else:
+			room['crystal2']= room['crystal2']+ value
+		
+		return True
+	
+	#火球术
+	@classmethod		
+	def doEffectAddAtk(self, room, pos, effect, uniqid= None):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		
+		range= effect['targetA']['range']		
+		ids= str(range.get('cardID'))
+		
+		value= effect['value']
+		if value== None or value< 1:
+			value= 1
+
+		if pos== 1:
+			room['hp']= room['hp']- value
+		else:
+			room['hp']= room['hp']- value
+		
+		room['hp']= max(room['hp'], 0)
+		
+		return True
+	
+	#召唤
+	@classmethod		
+	def doEffectSummon(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		
+		range= effect['targetA']['range']
+		uniqid= effect['object']
+		'''
+		if pos== 1:
+			object_pos, object_info = RoomModel.getRoomCardById(room['cardHand1'], uniqid)
+		else:
+			object_pos, object_info = RoomModel.getRoomCardById(room['cardHand2'], uniqid)
+		print object_info
+		if object_info== None:
+			return False
+		
+		'''
+		if pos== 1:
+			locaX = RoomModel.getRoomPlayCardsMaxLocaX(room['cardPlay1'])
+		else:
+			locaX = RoomModel.getRoomPlayCardsMaxLocaX(room['cardPlay2'])		
+		
+		ids= str(range.get('cardID'))
+		if ids== None:
+			return False
+		ids= ids.split(',')
+		
+		x= 0
+		for index, val in enumerate(ids):
+			#ids[index]= int(val)
+			x= x+1		
+			lx= locaX+ x
+			data= CardModel.getCardsById(int(val))
+			data['uniqid']= uniqid= int(time.time()) + data['_id']+ random.randint(100000, 999999)
+			data= RoomModel.getRoomCardCustomFormat(data)
+				
+			if pos== 1:
+				room['cardOrigin1'][uniqid]= data
+				data['locaX']= lx
+				data['locaY']= 0
+				room['cardPlay1'].append(data)
+				
+			else:
+				room['cardOrigin2'][uniqid]= data
+				data['locaX']= lx
+				data['locaY']= 0
+				room['cardPlay2'].append(data)				
+		
+				RoomModel.updatePlayCardsLocX(room, pos, lx, uniqid)
+		
+		return True
+	
+	
+	
+	
+		
+		

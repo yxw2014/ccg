@@ -1,0 +1,116 @@
+# -*- coding: utf-8 -*-
+import sys
+import os
+import random
+import time
+import json
+from errors import err
+#<class 'model.BaseModel.BaseModel'>
+from model.BaseModel import BaseModel
+from pymongo.errors import AutoReconnect
+						
+class CardModel(BaseModel): 
+	def __init__(self): 
+		super(CardModel, self).__init__()	
+		
+	@classmethod	
+	def getAllCards(self):
+		ret= []
+		try:
+			#data= self.mongodb['hs_cards'].find()	
+			for item in self.mongodb['hs_card'].find():
+				#for item in self.mongodb['hs_cards'].find():
+				ret.append(item)
+		except AutoReconnect:
+			self.log.error("mongodb error, AutoReconnect!")
+			pass
+		return ret
+	
+	@classmethod
+	def getCards(self, num=30):
+		ret= []
+		try:
+			#data= self.mongodb['hs_cards'].find()	
+			for item in self.mongodb['hs_card'].find().limit(num):
+				#for item in self.mongodb['hs_cards'].find():
+				ret.append(item)
+		except AutoReconnect:
+			self.log.error("mongodb error, AutoReconnect!")
+			pass
+		return ret
+	
+	@classmethod
+	def getCardsByRand(self, num=30):
+		ret= []
+	
+		try:
+			if num <= 1:
+				find_num= random.randint(20, 40)
+			elif num <= 5:
+				find_num= num*8
+			elif num <= 10:
+				find_num= num*4
+			elif num <= 20:
+				find_num= num*2+ random.randint(5, 10)
+			elif num <= 30:
+				find_num= num*2+ random.randint(5, 10)
+				
+			sort= random.randint(-1, 1)
+			
+			for item in self.mongodb['hs_card'].find().sort("rand", sort).limit(find_num):
+				ret.append(item)
+		except AutoReconnect:
+			self.log.error("mongodb error, AutoReconnect!")
+			pass
+		#todo, get the random cards
+		ret= random.sample(ret, num)
+		return ret
+		
+	@classmethod
+	def getFirstCards(self): 
+		return self.getCardsByRand(30)
+
+		
+		
+	@classmethod
+	def getCardsById(self, id): 
+		if(id== None):      
+			return None
+		
+		try:
+			data= self.mongodb['hs_card'].find_one({"_id": id})		
+			return  data
+		except AutoReconnect:
+			self.log.error("mongodb error, AutoReconnect!")
+			pass
+
+
+	@classmethod
+	def getRoomRandCards(self, data, num=1): 
+		if(isinstance(data, list)== False) or num< 0:
+			return None
+		
+		ret= []
+		le= len(data)
+		if num> le:
+			return None
+		for i in xrange(0, num):
+			le= len(data)
+
+			rand= random.randint(0, le-1)
+			p= data.pop(rand)
+			ret.append(p)
+
+		return ret
+	
+
+
+
+
+
+		
+			
+				
+
+		
+	

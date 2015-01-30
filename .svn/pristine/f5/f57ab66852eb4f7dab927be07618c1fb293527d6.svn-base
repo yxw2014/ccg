@@ -1,0 +1,247 @@
+# -*- coding: utf-8 -*-
+import sys
+import os
+import random
+import time
+import json
+from pprint import pprint
+from errors import err
+#<class 'model.BaseModel.BaseModel'>
+from model.BaseModel import BaseModel
+from model.FightModel import FightModel
+from model.EffectModel import EffectModel
+from pymongo.errors import AutoReconnect
+						
+class SkillModel(BaseModel): 
+	def __init__(self): 
+		super(SkillModel, self).__init__()	
+		
+	@classmethod	
+	def getSkillById(self, _id):
+		if(_id== None):      
+			return None
+		
+		try:
+			data= self.mongodb['hs_skill'].find_one({"_id": _id})		
+			return  data
+		except AutoReconnect:
+			self.log.error("mongodb error, AutoReconnect!")
+			
+	@classmethod
+	def getSkillByIds(self, ids):
+		if isinstance(ids, str)== False:
+			return []
+		ids= ids.split(',')
+		ret= []
+		try:
+			for item in self.mongodb['hs_skill'].find({"_id":{'$in':ids}}):
+				ret.append(item)
+		except AutoReconnect:
+			self.log.error("mongodb error, AutoReconnect!")
+
+		return ret
+	
+	@classmethod	
+	def parseEffects(self, uniqid, skills):
+		if isinstance(skills, dict)== False or uniqid== None:
+			return []
+		ret= []
+		for skill in skills:
+			effect= self.parseEffect(uniqid, skill)
+			ret.append(effect)
+		return ret
+			
+				
+	@classmethod	
+	def parseEffect(self, uniqid, skill):
+		if isinstance(skill, dict)== False or uniqid== None:
+			return {}
+		
+		'''
+		script= skill.get('script')
+		if script== None:
+			return {}
+		
+		effect= json.loads(script)
+		'''
+	
+		obj= {}
+		#技能id
+		obj['skill_id']= skill.get('_id')
+		
+		obj['skill_name']= skill.get('name')
+		#触发条件	
+		obj['trigger_condition']= 0
+		#触发时间
+		#obj['trigger_time']= 0
+		#触发者
+		obj['object']= uniqid
+		#触发目标
+		obj['target']= uniqid
+		#数值
+		obj['value']= 0
+		#数值来源
+		obj['value_source']= 0
+		#触发的事件
+		obj['event']= None
+		
+		#effect.append(obj)
+		
+		return obj
+	
+	@classmethod	
+	def parseEffectV2(self, room, pos, uniqid, skill):
+		if isinstance(room, dict)== False or isinstance(skill, dict)== False or uniqid== None:
+			return {}
+		
+		
+		script= skill.get('script')
+		if script== None:
+			return {}
+		
+		effect= json.loads(script)
+		
+	
+		obj= {}
+		#技能id
+		obj['skill_id']= skill.get('_id')
+		
+		obj['skill_name']= skill.get('name')
+		#触发条件	
+		obj['trigger']= effect['trigger']	
+		obj['trigger_condition']= effect['trigger']['triggerType']		
+		#触发者
+		obj['object']= uniqid 
+		#触发目标A
+		obj['targetA']= effect['targetA']
+		#触发目标B
+		obj['targetB']= effect['targetB']
+		#效果类型
+		obj['type']= effect['effectType']
+		#效果数值
+		obj['type']= effect['effectType']
+		#效果持续时间
+		obj['continuous']= effect['continuous']		
+		#经历的回合
+		obj['turn_count']= 0
+		
+		#parse target
+		
+		
+		return obj
+	
+	@classmethod	
+	def parseSkillTarget(self, room, pos, uniqid, target):
+		if isinstance(room, dict)== False or isinstance(target, dict)== False or uniqid== None or (pos!=1 and pos!= 2):
+			return []
+		ret= []
+		
+		range= target.get('range')
+		attribute= target.get('attribute')		
+		attribute_condition= target.get('attributeCondition')
+		pointer= target.get('pointer')
+		
+		return ret
+
+	@classmethod	
+	def triggerEffects(self, room, effects, pos):
+		if isinstance(room, dict)== False or (pos!=1 and pos!= 2):
+			return False
+
+		if isinstance(effects, list)== True:
+			for effect in effects:
+				self.doEffect(room, pos, effect, uniqid)			
+		else:
+			return False
+		
+		return False
+	
+	'''
+	@classmethod	
+	def triggerEffect(self, room, uniqid, effect, pos):
+		if isinstance(room, dict)== False or uniqid== None or (pos!=1 and pos!= 2):
+			return False
+
+		if isinstance(effect, dict)== True:	
+			return self.doEffect(self, room,  pos, effect)
+		else:
+			return False
+		
+		return False
+	'''
+
+	@classmethod
+	def doEffect(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		
+		print '----------------doEffect', pos, effects		
+					
+		#立即触发，比如冲锋
+		if e['skill_name']== 'Dash':
+			return 	EffectModel.doEffectDash(room, pos, e)
+		#立即触发，比如冲锋
+		elif e['skill_name']== 'Taunt':
+			return 	EffectModel.doEffectTaunt(room, pos, e)								  
+		else:
+			return True
+			
+		return True
+
+	@classmethod	
+	def triggerStackEffects(self, room,  pos, trigger_condition= 'now'):
+		if isinstance(room, dict)== False or trigger_condition== None or (pos!=1 and pos!= 2):
+			return False
+		
+		trigger_condition= str(trigger_condition)
+		if pos== 1:
+			effect_stack=  room['effect1']
+		elif pos==2:
+			effect_stack=  room['effect2']
+		
+		effects= effect_stack.get(trigger_condition)
+		
+		print '----------------triggerStackEffects', pos, effects	
+		
+		if isinstance(effects, list)== True:
+			if len(effects)> 0: 
+				for e in effects:
+					return self.doEffect(room,  pos, e)
+			else:
+				return True
+		else:
+			return True
+		
+		return True
+	
+	@classmethod	
+	def getEffectsByTriggerCondition(self, effects, condition):
+		if isinstance(effects, dict)== False or isinstance(condition, str)== False:
+			return []
+		
+		ret= []
+		
+		for index, val in enumerate(effects):
+			#trigger_condition= int(val.get('trigger_condition'))
+			trigger_condition= str(val.get('trigger_condition'))
+			if(trigger_condition== condition):
+				ret.append(val)
+		return ret
+	
+	
+	@classmethod
+	def addRoomEffectToStack(self, stack, effects):
+		if isinstance(stack, dict)== True and isinstance(effects, dict)== True:	
+
+
+			trigger_condition= int(effects.get('trigger_condition'))			
+			stack[trigger_condition]= []
+			stack[trigger_condition].append(effects)
+			return True
+		
+		else:			
+			return False
+	
+	
+	
+	

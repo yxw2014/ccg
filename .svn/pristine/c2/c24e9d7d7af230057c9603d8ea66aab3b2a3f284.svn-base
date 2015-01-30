@@ -1,0 +1,37 @@
+from  model.CardModel import CardModel
+from  model.HeroModel import HeroModel
+from  model.RoomModel import RoomModel
+
+import sys, json, random
+
+from config import config
+from model import BaseModel
+from lib.mongo import Mongo
+
+from pprint import pprint
+
+model= BaseModel.BaseModel
+"""
+mongo= Mongo.getInstance(config['MONGO_STAG']['host'], int(config['MONGO_STAG']['port']))
+mongodb= mongo[config['MONGO_STAG']['db']]
+model.mongodb= mongodb 
+print CardModel.getFirstCards()
+"""
+
+room= [{'aaa':123}, {'aaa':'456'}]
+
+class AA():
+	@classmethod
+	def aa(self):
+		print 'here'
+		pass
+
+	@classmethod
+	def bb(self):
+		self.aa()
+		pass
+
+for a in room:
+	a['aaa']= a['aaa']*2
+
+print room

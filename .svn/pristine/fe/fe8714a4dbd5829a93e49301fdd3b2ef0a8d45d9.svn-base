@@ -1,0 +1,25 @@
+from  model.CardModel import CardModel
+from  model.HeroModel import HeroModel
+from  model.RoomModel import RoomModel
+
+import sys, json, random
+
+from config import config
+from model import BaseModel
+from lib.mongo import Mongo
+
+from pprint import pprint
+
+model= BaseModel.BaseModel
+"""
+mongo= Mongo.getInstance(config['MONGO_STAG']['host'], int(config['MONGO_STAG']['port']))
+mongodb= mongo[config['MONGO_STAG']['db']]
+model.mongodb= mongodb 
+print CardModel.getFirstCards()
+"""
+
+room= {'ccc':{'aaa':123},'ddd': [{'aaa':'456'}]}
+room = [{'aaa':123, 'ccc':123},{'aaa':'456'}]
+for a in room:
+	print a['ddd']
+print room

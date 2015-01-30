@@ -1,0 +1,26 @@
+from  model.CardModel import CardModel
+from  model.HeroModel import HeroModel
+from  model.RoomModel import RoomModel
+
+import sys, json, random
+
+from config import config
+from model import BaseModel
+from lib.mongo import Mongo
+
+from pprint import pprint
+
+model= BaseModel.BaseModel
+"""
+mongo= Mongo.getInstance(config['MONGO_STAG']['host'], int(config['MONGO_STAG']['port']))
+mongodb= mongo[config['MONGO_STAG']['db']]
+model.mongodb= mongodb 
+print CardModel.getFirstCards()
+"""
+
+
+class AAA(object):
+	a, b= range(1, 10)
+
+
+print AAA.a, type(AAA.b)

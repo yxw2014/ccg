@@ -1,0 +1,43 @@
+server.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 660
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 468
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+server.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+server.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor

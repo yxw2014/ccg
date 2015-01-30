@@ -1,0 +1,1090 @@
+./model\FightModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+./model\FightModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 145, in parse_message
+    data, push_data= func(params)
+  File "F:\ccg\service\FightService.py", line 38, in searchRoom
+    return self.__createRoom(params)
+  File "F:\ccg\service\FightService.py", line 95, in __createRoom
+    hero1= HeroModel.getSystemOrUserHerosById(uuid, heroId1)
+  File "./model\HeroModel.py", line 166, in getSystemOrUserHerosById
+    data= self.getUserHerosById(userId, id)
+  File "./model\HeroModel.py", line 144, in getUserHerosById
+    heroInfo = self.getHerosByJob(data['job'])
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Exception in callback <functools.partial object at 0x02B5DE70>
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 458, in _run_callback
+    callback()
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 145, in parse_message
+    data, push_data= func(params)
+  File "F:\ccg\service\FightService.py", line 38, in searchRoom
+    return self.__createRoom(params)
+  File "F:\ccg\service\FightService.py", line 95, in __createRoom
+    hero1= HeroModel.getSystemOrUserHerosById(uuid, heroId1)
+  File "./model\HeroModel.py", line 166, in getSystemOrUserHerosById
+    data= self.getUserHerosById(userId, id)
+  File "./model\HeroModel.py", line 144, in getUserHerosById
+    heroInfo = self.getHerosByJob(data['job'])
+TypeError: 'NoneType' object has no attribute '__getitem__'
+F:\ccg\service\FightService.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 660
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 664
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\service\FightService.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\service\FightService.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\service\FightService.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\service\FightService.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\service\FightService.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\service\FightService.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 145, in parse_message
+    data, push_data= func(params)
+  File "F:\ccg\service\FightService.py", line 38, in searchRoom
+    return self.__createRoom(params)
+  File "F:\ccg\service\FightService.py", line 95, in __createRoom
+    hero1= HeroModel.getSystemOrUserHerosById(uuid, heroId1)
+  File "./model\HeroModel.py", line 166, in getSystemOrUserHerosById
+    data= self.getUserHerosById(userId, id)
+  File "./model\HeroModel.py", line 144, in getUserHerosById
+    heroInfo = self.getHerosByJob(data['job'])
+TypeError: 'NoneType' object has no attribute '__getitem__'
+Exception in callback <functools.partial object at 0x02AB8F00>
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 458, in _run_callback
+    callback()
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 145, in parse_message
+    data, push_data= func(params)
+  File "F:\ccg\service\FightService.py", line 38, in searchRoom
+    return self.__createRoom(params)
+  File "F:\ccg\service\FightService.py", line 95, in __createRoom
+    hero1= HeroModel.getSystemOrUserHerosById(uuid, heroId1)
+  File "./model\HeroModel.py", line 166, in getSystemOrUserHerosById
+    data= self.getUserHerosById(userId, id)
+  File "./model\HeroModel.py", line 144, in getUserHerosById
+    heroInfo = self.getHerosByJob(data['job'])
+TypeError: 'NoneType' object has no attribute '__getitem__'
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 936
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 956
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\model\RoomModel.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\const.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Error in connection callback
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\tcpserver.py", line 242, in _handle_connection
+    self.handle_stream(stream, address)
+  File "server.py", line 211, in handle_stream
+    Connection(stream, address)
+  File "server.py", line 93, in __init__
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 21, in dump
+    self.format(obj['params'])
+AttributeError: request instance has no attribute 'format'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 660
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Error in connection callback
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\tcpserver.py", line 242, in _handle_connection
+    self.handle_stream(stream, address)
+  File "server.py", line 211, in handle_stream
+    Connection(stream, address)
+  File "server.py", line 93, in __init__
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 21, in dump
+    self.format(obj['params'])
+AttributeError: request instance has no attribute 'format'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Error in connection callback
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\tcpserver.py", line 242, in _handle_connection
+    self.handle_stream(stream, address)
+  File "server.py", line 211, in handle_stream
+    Connection(stream, address)
+  File "server.py", line 93, in __init__
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.format(obj['params'])
+AttributeError: request instance has no attribute 'format'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Error in connection callback
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\tcpserver.py", line 242, in _handle_connection
+    self.handle_stream(stream, address)
+  File "server.py", line 211, in handle_stream
+    Connection(stream, address)
+  File "server.py", line 93, in __init__
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.format(obj['params'])
+AttributeError: request instance has no attribute 'format'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Error in connection callback
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\tcpserver.py", line 242, in _handle_connection
+    self.handle_stream(stream, address)
+  File "server.py", line 211, in handle_stream
+    Connection(stream, address)
+  File "server.py", line 93, in __init__
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.format(obj['params'])
+AttributeError: request instance has no attribute 'format'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Error in connection callback
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\tcpserver.py", line 242, in _handle_connection
+    self.handle_stream(stream, address)
+  File "server.py", line 211, in handle_stream
+    Connection(stream, address)
+  File "server.py", line 93, in __init__
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+AttributeError: request instance has no attribute 'formatObj'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__format(obj[key])
+AttributeError: request instance has no attribute '_request__format'
+Exception in callback <functools.partial object at 0x02B81F90>
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 458, in _run_callback
+    callback()
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__format(obj[key])
+AttributeError: request instance has no attribute '_request__format'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 780
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__format(obj[key])
+AttributeError: request instance has no attribute '_request__format'
+Exception in callback <functools.partial object at 0x02BC0FC0>
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 458, in _run_callback
+    callback()
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__format(obj[key])
+AttributeError: request instance has no attribute '_request__format'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 660
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__formatObj(obj[key])
+AttributeError: request instance has no attribute '_request__formatObj'
+Exception in callback <functools.partial object at 0x02B21F90>
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 458, in _run_callback
+    callback()
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__formatObj(obj[key])
+AttributeError: request instance has no attribute '_request__formatObj'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 676
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__formatObj(obj[key])
+AttributeError: request instance has no attribute '_request__formatObj'
+Exception in callback <functools.partial object at 0x02AF9F90>
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 458, in _run_callback
+    callback()
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__formatObj(obj[key])
+AttributeError: request instance has no attribute '_request__formatObj'
+Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__formatObj(obj[key])
+AttributeError: request instance has no attribute '_request__formatObj'
+Exception in callback <functools.partial object at 0x02B60FC0>
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 458, in _run_callback
+    callback()
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.__formatObj(obj[key])
+AttributeError: request instance has no attribute '_request__formatObj'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 660
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.doFormatObj(obj[key])
+AttributeError: request instance has no attribute 'doFormatObj'
+Exception in callback <functools.partial object at 0x02A6CF90>
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 458, in _run_callback
+    callback()
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\iostream.py", line 341, in wrapper
+    callback(*args)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 331, in wrapped
+    raise_exc_info(exc)
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\stack_context.py", line 302, in wrapped
+    ret = fn(*args, **kwargs)
+  File "server.py", line 175, in send_message
+    res= self.parse_message(data)
+  File "server.py", line 162, in parse_message
+    res= reqt.dump()
+  File "F:\ccg\request.py", line 22, in dump
+    self.formatObj(obj['params'])
+  File "F:\ccg\request.py", line 72, in formatObj
+    self.doFormatObj(obj[key])
+AttributeError: request instance has no attribute 'doFormatObj'
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 660
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\request.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+F:\ccg\response.py modified; restarting server
+error closing fd 224
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor
+error closing fd 156
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\tornado-3.1.1-py2.7.egg\tornado\ioloop.py", line 519, in close
+    os.close(fd)
+OSError: [Errno 9] Bad file descriptor

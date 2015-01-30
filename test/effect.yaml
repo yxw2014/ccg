@@ -1,0 +1,52 @@
+target:
+  job: warrior
+  field: hands
+  range: camp
+  pointer:
+    type: randomX
+    value: 2
+  race: kids
+  role: hero
+  mathCondition:
+    value: 3
+    type: hpGT
+value:
+  type: toN
+  value: 30
+valueFrom:
+  type: toN
+  value: 1
+  target:
+    role: hero
+    mathCondition:
+      value: 3
+      type: hpGT
+    job: warrior
+    field: hands
+    pointer:
+      type: randomX
+      value: 2
+    range: camp
+    race: kids
+triger: myTurnEnd
+object: null
+continuous:
+  value: 0
+  type: thisTurnEnd
+type: chakra+
+trigerCondition:
+  target:  
+    job: warrior
+    field: hands
+    pointer:
+      value: 2
+      type: randomX
+    range: camp
+    race: kids
+    role: hero
+    mathCondition:
+      type: hpGT
+      value: 3
+  
+  object: null
+  condition: die

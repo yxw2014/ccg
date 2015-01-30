@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+
+import sys
+
+err= {
+	#common error
+	0: '',
+	1: 'paramters error',
+	2: 'unkown service',
+	3: 'unkown method',		
+	4: 'parse_message, json.loads error',
+	5: 'unkown',
+	6: 'unkown error',
+	
+	#fight error
+	14: 'search room error',
+	15: 'creat room_id error',
+	16: 'round error',	
+	17: 'room error',
+	18: 'matchedSucceededComplete error',
+	19: 'matchedSucceededComplete repeated',
+	20: 'startBattel, checked faild',	
+	
+	#user error
+	101: '',
+
+
+
+	
+}

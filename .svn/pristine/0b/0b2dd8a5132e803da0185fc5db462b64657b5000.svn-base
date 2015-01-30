@@ -1,0 +1,34 @@
+# -*- coding: utf-8 -*-
+import sys
+import os
+import random
+import time
+import json
+from pprint import pprint
+from errors import err
+#<class 'model.BaseModel.BaseModel'>
+from model.BaseModel import BaseModel
+from model.CardModel import CardModel
+from model.RoomModel import RoomModel
+from pymongo.errors import AutoReconnect
+						
+class SkillModel(BaseModel): 
+	def __init__(self): 
+		super(SkillModel, self).__init__()	
+		
+	@classmethod	
+	def getCardSkill(self, _id):
+
+	
+	@classmethod	
+	def getHeroSkill(self, _id):
+
+
+	@classmethod	
+	def parseSkill(self, _id):
+
+
+	@classmethod	
+	def doSkill(self, _id):
+
+

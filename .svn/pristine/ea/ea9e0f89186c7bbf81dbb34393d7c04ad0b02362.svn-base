@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+
+import sys,os,time
+import json, struct
+from config import config
+from errors import err
+
+class response:
+    def __init__(self, data, uid):        
+        if(isinstance(data, dict)!= False):           
+            #self.error= data["error"]
+            self.service= data["service"]
+            self.method= data["method"]
+            self.data= data["data"]
+            self.data['error']= data["error"]
+            self.uid= uid
+            self.error= False
+        else:
+            self.error= True
+        self.version= '2013111910'
+        
+    def dump(self):
+        '''
+        if self.error!= True:
+            obj = {'version': self.version, "uid": self.uid, 'service':self.service, 'method':self.method, 'params': self.data} 
+        else:
+            obj = {'version': self.version, "uid": '', 'service':'main', 'method':'error', 'params': {'error': {"code":6, 'msg':err[6]}}} 
+        '''
+            
+        if self.error!= True:
+            obj = {"uid": self.uid, 'method':self.method, 'params': self.data} 
+        else:
+            obj = {"uid": '', 'method':'error', 'params': {'error': {"code":6, 'msg':err[6]}}}
+             
+        encodedjson = json.dumps(obj) 
+        encodedjson= (encodedjson+ config['GAME']['msgsuffix'])
+        encodedjson= struct.pack(str(len(encodedjson))+'s', encodedjson)
+        return encodedjson
+        
+if __name__ == '__main__':  
+    c= response({})
+    print c.dump()
+    
+    
+    
+    
+    
+    

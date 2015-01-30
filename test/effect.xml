@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<effect>
+	 <triger>myTurnEnd</triger> 
+
+	 <trigerCondition>
+		<object>None</object>  
+		<target>...</target>  
+	 </trigerCondition> 
+
+	 <object>None</object> 
+
+	 <target>  
+		<range>camp</range>  
+		<field>hands</field>  
+		<role>hero</role>  
+		<job>warrior</job>    
+
+		<race>kids</race>  
+
+		<mathCondition>
+			<type>hpGT</type>  
+			<value>3</value> 	
+		</mathCondition>   
+		
+		<pointer>
+			<type>randomX</type>  
+			<value>4</value> 	
+		</pointer>  
+	 </target>  
+
+	<type>chakra</type> 
+
+	<value>
+			<type>toN</type>  
+			<value>2</value> 	
+			
+	</value>
+
+	<valueFrom>
+			<target>...</target>  
+			<type>toN</type>
+			<value>2</value> 	
+			
+	</valueFrom>
+
+	<continuous>
+			<type>thisTurnEnd</type>
+			<value>0</value> 			
+	</continuous>
+</effect>

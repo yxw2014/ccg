@@ -1,0 +1,129 @@
+# -*- coding: utf-8 -*-
+import sys
+import os
+import random
+import time
+import json
+from pprint import pprint
+from errors import err
+#<class 'model.BaseModel.BaseModel'>
+from model.BaseModel import BaseModel
+from model.RoomModel import RoomModel
+from model.CardModel import CardModel
+from model.FightModel import FightModel
+from pymongo.errors import AutoReconnect
+						
+class EffectModel(BaseModel): 
+	def __init__(self): 
+		super(EffectModel, self).__init__()
+			
+	'''
+	#冲锋
+	@classmethod		
+	def doEffectDash(self, room, pos, uniqid, effect):
+		if isinstance(room, dict)== False or uniqid== None or isinstance(effect, dict)== False or uniqid== None or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['cardPlay1'][-1]['status']= FightModel.STATUS_DASH 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['cardPlay2'][-1]['status']= FightModel.STATUS_DASH 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+	'''
+		
+	#冲锋
+	@classmethod		
+	def doEffectDash(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['cardPlay1'][-1]['currentAtkTime']= 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['currentAtkTime'])>0 :
+			room['cardPlay2'][-1]['currentAtkTime']= 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+	
+	#嘲讽
+	@classmethod		
+	def doEffectTaunt(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['cardPlay1'][-1]['status']= FightModel.STATUS_TAUNT 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['cardPlay2'][-1]['status']= FightModel.STATUS_TAUNT 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+	
+	@classmethod		
+	def doEffectAddCrystal(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['crystal1']= room['crystal1']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['crystal2'][-1]['status']= room['crystal2']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+	
+	@classmethod		
+	def doEffectAddHp(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['crystal1'][-1]['hp']= room['hp']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['crystal2'][-1]['status']= room['crystal2']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+	
+	
+	@classmethod		
+	def doEffectAddHpAndAtk(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			room['crystal1']= room['crystal1']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			room['crystal2'][-1]['status']= room['crystal2']+ 1 
+			room['cardPlay1'][-1]['skill'].append(effect['skill_id'])
+		else:
+			return False
+		
+		return True
+	
+	@classmethod		
+	def doEffectSummon(self, room, pos, effect):
+		if isinstance(room, dict)== False or isinstance(effect, dict)== False or (pos!=1 and pos!= 2):
+			return False
+		if pos== 1 and len(room['cardPlay1'])>0 :
+			pass
+		elif pos== 2 and len(room['cardPlay2'])>0 :
+			pass
+		else:
+			return False
+		
+		return True
+		
+		

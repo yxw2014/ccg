@@ -1,0 +1,81 @@
+{
+
+    "triger": "myTurnEnd",
+    
+    "trigerCondition": {
+        "object": '',
+        "target": {
+			        "range":"camp",
+			        "field": "hands",
+			        "role": "hero",
+			        "job": "warrior",
+			        "race": "kids",        
+			            
+			        "mathCondition": {
+			            "type": "hpGT",
+			            "value":3
+			        },
+			        
+			        "pointer": {
+			            "type": "randomX",
+			            "value": 2
+			        }    
+			    },
+        "condition": "die"
+    }, 
+       
+    "object": '',
+    
+    "target": {
+        "range":"camp",
+        "field": "hands",
+        "role": "hero",
+        "job": "warrior",
+        "race": "kids",        
+            
+        "mathCondition": {
+            "type": "hpGT",
+            "value":3
+        },
+        
+        "pointer": {
+            "type": "randomX",
+            "value": 2
+        }    
+    },  
+       
+    "type": "chakra+",
+    
+    "value":{
+        "type":"toN",
+        "value":30   
+    },
+       
+    "valueFrom":{
+        "target": {
+			        "range":"camp",
+			        "field": "hands",
+			        "role": "hero",
+			        "job": "warrior",
+			        "race": "kids",        
+			            
+			        "mathCondition": {
+			            "type": "hpGT",
+			            "value":3
+			        },
+			        
+			        "pointer": {
+			            "type": "randomX",
+			            "value": 2
+			        }    
+			    },
+        "type": "toN",
+        "value": 1  
+    },   
+       
+    "continuous": {
+        "type": "thisTurnEnd",
+        "value": 0
+    }
+
+}
