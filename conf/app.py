@@ -8,7 +8,7 @@ pass=myninjav2_beta1_passwd
 db=myninjav2_beta1
 
 [MYSQL_STAG]
-host=50.23.111.162
+host=127.0.0.1
 user=root
 pass=stm123
 db=myninjav2_beta1
@@ -19,7 +19,7 @@ port=6379
 db=11
 
 [REDIS_STAG]
-host=50.23.111.162
+host=127.0.0.1
 port=6379
 db=7
 
@@ -30,7 +30,7 @@ port=27017
 db=ccg_alpha
 
 [MONGO_STAG]
-host=50.23.111.162
+host=127.0.0.1
 port=27017
 db=ccg_alpha
 
@@ -43,7 +43,5 @@ handCardsLimit=10
 
 
 [MAIL]
-smtp_server=mail2-in.baidu.com
-from=autopost@baidu.com
-to=mon@baidu.com
+
 
